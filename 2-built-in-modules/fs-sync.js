@@ -11,6 +11,7 @@ const { readFileSync, writeFileSync} = require('fs');
 // Filesystems has synchronous and asynchronous functions to allow blocking and non-blocking code
 // This file is using the synchronous functions
 
+console.log("Start");
 // You can specify the encoding with the second parameter
 // Make sure you run this while within the directory of the fs.js file
 const first = readFileSync('./content/first.txt', 'utf8');
@@ -24,3 +25,5 @@ writeFileSync(
     `Here are the result ${first}, ${second}`,
     { flag: 'a'}
 )
+console.log("Done with this task.");
+console.log("Starting with the next one.");

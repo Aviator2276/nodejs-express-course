@@ -11,6 +11,7 @@ const { readFile, writeFile} = require('fs');
 // Filesystems has synchronous and asynchronous functions to allow blocking and non-blocking code
 // This file is using the asynchronous functions
 
+console.log("Start")
 // We need to provide a callback for async functions. So when a function is done, we do this code.
 // The callback function takes an error and a result. If there's an error, log it. If everything's
 // good, then do something with the result.
@@ -41,9 +42,15 @@ readFile('./content/first.txt', 'utf8', (err, result) => {
                 console.log(err);
                 return;
             }
+            console.log("Done with this task.")
             console.log(result);
             // Result is undefined because we're not expecting anything back
         });
     });
 });
+// As you can see, this console log will start right after start, not after "done task"
+// This is because it is a asynchronous task, so Node will put this aside from the main
+// task. Allowing other code to execute while this runs in the background.
+console.log("Starting next task.");
 // Nesting these callbacks is bad practice, so later on we'll use a better way to do this.
+// E.g. promises or asyncwait
