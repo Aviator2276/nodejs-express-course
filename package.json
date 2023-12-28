@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-express-course",
+  "version": "1.0.0",
+  "description": "A repository to store all my projects while doing the NodeJS & Express Full Course",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aviator2276/nodejs-express-course.git"
+  },
+  "author": "Aviator2277",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aviator2276/nodejs-express-course/issues"
+  },
+  "homepage": "https://github.com/Aviator2276/nodejs-express-course#readme"
+}
