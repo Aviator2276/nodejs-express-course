@@ -80,3 +80,17 @@ Replace with your values
 ```bash
 mongosh -u "NodeCourseUser" -p pass1234 --authenticationDatabase "expressdb"
 ```
+
+### 6. See collections and data
+See collections
+```bash
+show collections
+```
+View data inside collection
+```bash
+db.<CollectionName>.find().pretty()
+```
+### 7. Setup connection URL
+```bash
+mongodb://<USER>:<PASS>@127.0.0.1:27017/<DBNAME>?retryWrites=true&w=majority
+```
